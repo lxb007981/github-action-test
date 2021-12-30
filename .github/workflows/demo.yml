@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          repository: 'https://github.com/lxb007981/bilibili-API-collect'
+          repository: 'lxb007981/bilibili-API-collect'
           ref: 'master'
       - uses: actions/checkout@v2
         with:
