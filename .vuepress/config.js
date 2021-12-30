@@ -6,6 +6,7 @@ module.exports = {
     title: 'bilibili-API-collect',
     description: '',
     base: 'github-action-test',
+    dest: 'dist',
     markdown: {
         html: true,
         // markdown-it-anchor 的选项
