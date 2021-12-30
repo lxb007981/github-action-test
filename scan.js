@@ -7,13 +7,13 @@ const fs = require('fs');
 const path = require('path');
 const insertLine = require('insert-line')
 const { isBinary } = require('istextorbinary');
-function scanAndgen(dirname) {
+function scanAndGen(dirname) {
     const dirents = fs.readdirSync(dirname, { withFileTypes: true })
     const dirs = dirents.filter(dirent => dirent.isDirectory()).map(dirent => dirent.name);
     const direntsName = dirents.map(dirent => dirent.name);
     const files = dirents.filter(dirent => dirent.isFile()).map(dirent => dirent.name);
     for (const dir of dirs) {
-        scanAndgen(path.resolve(dirname, dir))
+        scanAndGen(path.resolve(dirname, dir))
     }
     for (const file of files) {
         const oldPath = path.resolve(dirname, file);
@@ -60,8 +60,8 @@ function scanAndgen(dirname) {
 const dirs = fs.readdirSync(__dirname, { withFileTypes: true })
     .filter(dirent => dirent.isDirectory())
     .map(dirent => dirent.name)
-    .filter(name => name !== 'node_modules' && name !== '.vuepress' && name !== '.git');
+    .filter(name => !(['node_modules', '.vuepress', '.git', 'imgs'].includes(name)));
 
 for (const dir of dirs) {
-    scanAndgen(path.resolve(__dirname, dir))
+    scanAndGen(path.resolve(__dirname, dir))
 }

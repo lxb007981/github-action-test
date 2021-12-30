@@ -38,6 +38,8 @@ jobs:
           npm install -g npm
           npm ci
           cp -r imgs .vuepress/public
+          ls .vuepress
+          ls .vuepress/public
           node scan.js
           npx vuepress build .
       - name: Deploy 🚀

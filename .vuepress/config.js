@@ -1,5 +1,5 @@
 module.exports = {
-    plugins: ['vuepress-plugin-nprogress','@vuepress/back-to-top'],
+    plugins: ['vuepress-plugin-nprogress', '@vuepress/back-to-top'],
     themeConfig: {
         sidebar: 'auto',
         logo: '/imgs/logo2.jpg',
@@ -15,8 +15,11 @@ module.exports = {
         // markdown-it-toc 的选项
         toc: { includeLevel: [1, 2] },
         extendMarkdown: md => {
+            /**
+             * add './' before local url
+             */
             const { parse } = require('node-html-parser');
-            md.renderer.rules.image = function (tokens, idx, options, env, self) {
+            md.renderer.rules.image = function (tokens, idx, _options, _env, _self) {
                 const token = tokens[idx],
                     aIndex = token.attrIndex('src'),
                     attr = token.attrs[aIndex][1],
@@ -32,6 +35,10 @@ module.exports = {
                         return `<img src="./${attr}" alt="${alt}"`;
                 }
             };
+
+            /**
+             * add './' before local url, and referrerpolicy to external url
+             */
             md.renderer.rules.html_block = function (tokens, idx /*, options, env */) {
                 const content = tokens[idx].content;
                 const root = parse(content);
@@ -56,7 +63,6 @@ module.exports = {
                 }
                 return root.toString();
             };
-
         }
     }
 }
