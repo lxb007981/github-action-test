@@ -1,3 +1,8 @@
+/***
+ * Recursively scan docs. For each directory, generate README.md containing router link to each entry in the directory.
+ * Convert source code file (.proto) to markdown with code block, so that it could be recognized by VuePress.
+ */
+
 const fs = require('fs');
 const path = require('path');
 const insertLine = require('insert-line')

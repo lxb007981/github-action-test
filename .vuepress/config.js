@@ -1,7 +1,8 @@
 module.exports = {
     plugins: ['vuepress-plugin-nprogress','@vuepress/back-to-top'],
     themeConfig: {
-        sidebar: 'auto'
+        sidebar: 'auto',
+        logo: '/imgs/logo2.jpg',
     },
     title: 'bilibili-API-collect',
     description: '',
