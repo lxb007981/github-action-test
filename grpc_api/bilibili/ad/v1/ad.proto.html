@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>bilibili-API-collect</title>
+    <meta name="generator" content="VuePress 1.9.5">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="github-action-test/assets/css/0.styles.e9ffcd7c.css" as="style"><link rel="preload" href="github-action-test/assets/js/app.3a2e0c2e.js" as="script"><link rel="preload" href="github-action-test/assets/js/2.c3585fe2.js" as="script"><link rel="preload" href="github-action-test/assets/js/87.c5326e0d.js" as="script"><link rel="prefetch" href="github-action-test/assets/js/10.778afec7.js"><link rel="prefetch" href="github-action-test/assets/js/100.aca2bedc.js"><link rel="prefetch" href="github-action-test/assets/js/101.9ebc8d4c.js"><link rel="prefetch" href="github-action-test/assets/js/102.5b7b7ad8.js"><link rel="prefetch" href="github-action-test/assets/js/103.cffb0f8a.js"><link rel="prefetch" href="github-action-test/assets/js/104.20d21cef.js"><link rel="prefetch" href="github-action-test/assets/js/105.4d2a8eda.js"><link rel="prefetch" href="github-action-test/assets/js/106.d58423c2.js"><link rel="prefetch" href="github-action-test/assets/js/107.f842d459.js"><link rel="prefetch" href="github-action-test/assets/js/108.86aaab46.js"><link rel="prefetch" href="github-action-test/assets/js/109.650e760e.js"><link rel="prefetch" href="github-action-test/assets/js/11.e9ce47e2.js"><link rel="prefetch" href="github-action-test/assets/js/110.0865f653.js"><link rel="prefetch" href="github-action-test/assets/js/111.9efc7160.js"><link rel="prefetch" href="github-action-test/assets/js/112.862375c1.js"><link rel="prefetch" href="github-action-test/assets/js/113.0d5669d7.js"><link rel="prefetch" href="github-action-test/assets/js/114.a0ee0fb8.js"><link rel="prefetch" href="github-action-test/assets/js/115.9f16b37f.js"><link rel="prefetch" href="github-action-test/assets/js/116.8151afea.js"><link rel="prefetch" href="github-action-test/assets/js/117.b4897a47.js"><link rel="prefetch" href="github-action-test/assets/js/118.14adb0af.js"><link rel="prefetch" href="github-action-test/assets/js/119.23e89aad.js"><link rel="prefetch" href="github-action-test/assets/js/12.415f4cf7.js"><link rel="prefetch" href="github-action-test/assets/js/120.3cde80ee.js"><link rel="prefetch" href="github-action-test/assets/js/121.1707e201.js"><link rel="prefetch" href="github-action-test/assets/js/122.fb246ad2.js"><link rel="prefetch" href="github-action-test/assets/js/123.3937846b.js"><link rel="prefetch" href="github-action-test/assets/js/124.fe733a53.js"><link rel="prefetch" href="github-action-test/assets/js/125.f556e097.js"><link rel="prefetch" href="github-action-test/assets/js/126.57bb7f97.js"><link rel="prefetch" href="github-action-test/assets/js/127.fa88d6d9.js"><link rel="prefetch" href="github-action-test/assets/js/128.3d2eb2e2.js"><link rel="prefetch" href="github-action-test/assets/js/129.60f9b9ef.js"><link rel="prefetch" href="github-action-test/assets/js/13.59e0209d.js"><link rel="prefetch" href="github-action-test/assets/js/130.0c340141.js"><link rel="prefetch" href="github-action-test/assets/js/131.b506adc4.js"><link rel="prefetch" href="github-action-test/assets/js/132.2580f3c3.js"><link rel="prefetch" href="github-action-test/assets/js/133.72934895.js"><link rel="prefetch" href="github-action-test/assets/js/134.76678be8.js"><link rel="prefetch" href="github-action-test/assets/js/135.642d1325.js"><link rel="prefetch" href="github-action-test/assets/js/136.9b942256.js"><link rel="prefetch" href="github-action-test/assets/js/137.69598e6e.js"><link rel="prefetch" href="github-action-test/assets/js/138.30ff812e.js"><link rel="prefetch" href="github-action-test/assets/js/139.786cd4c2.js"><link rel="prefetch" href="github-action-test/assets/js/14.1afcedcd.js"><link rel="prefetch" href="github-action-test/assets/js/140.b16a857d.js"><link rel="prefetch" href="github-action-test/assets/js/141.955a1aac.js"><link rel="prefetch" href="github-action-test/assets/js/142.d236a1ca.js"><link rel="prefetch" href="github-action-test/assets/js/143.48b6892f.js"><link rel="prefetch" href="github-action-test/assets/js/144.bcefbd64.js"><link rel="prefetch" href="github-action-test/assets/js/145.decdc68d.js"><link rel="prefetch" href="github-action-test/assets/js/146.b52b465b.js"><link rel="prefetch" href="github-action-test/assets/js/147.c25a8243.js"><link rel="prefetch" href="github-action-test/assets/js/148.94032481.js"><link rel="prefetch" href="github-action-test/assets/js/149.dedd4ae5.js"><link rel="prefetch" href="github-action-test/assets/js/15.263da3bf.js"><link rel="prefetch" href="github-action-test/assets/js/150.62598307.js"><link rel="prefetch" href="github-action-test/assets/js/151.622b9b15.js"><link rel="prefetch" href="github-action-test/assets/js/152.4cae4ae5.js"><link rel="prefetch" href="github-action-test/assets/js/153.b49ee8d6.js"><link rel="prefetch" href="github-action-test/assets/js/154.fb876cf9.js"><link rel="prefetch" href="github-action-test/assets/js/155.f72f36e9.js"><link rel="prefetch" href="github-action-test/assets/js/156.81a7208b.js"><link rel="prefetch" href="github-action-test/assets/js/157.e3017b52.js"><link rel="prefetch" href="github-action-test/assets/js/158.e47bdcb0.js"><link rel="prefetch" href="github-action-test/assets/js/159.e84efa11.js"><link rel="prefetch" href="github-action-test/assets/js/16.43ab4ffb.js"><link rel="prefetch" href="github-action-test/assets/js/160.05a3340e.js"><link rel="prefetch" href="github-action-test/assets/js/161.35761410.js"><link rel="prefetch" href="github-action-test/assets/js/162.ffe97539.js"><link rel="prefetch" href="github-action-test/assets/js/163.1e291e97.js"><link rel="prefetch" href="github-action-test/assets/js/164.ed6787de.js"><link rel="prefetch" href="github-action-test/assets/js/165.e9707ac6.js"><link rel="prefetch" href="github-action-test/assets/js/166.f92f995e.js"><link rel="prefetch" href="github-action-test/assets/js/167.5847297a.js"><link rel="prefetch" href="github-action-test/assets/js/168.22ea56dd.js"><link rel="prefetch" href="github-action-test/assets/js/169.b3976693.js"><link rel="prefetch" href="github-action-test/assets/js/17.d5018ecc.js"><link rel="prefetch" href="github-action-test/assets/js/170.4a8bab8a.js"><link rel="prefetch" href="github-action-test/assets/js/171.5c3b0412.js"><link rel="prefetch" href="github-action-test/assets/js/172.6f2197c8.js"><link rel="prefetch" href="github-action-test/assets/js/173.9f915bf9.js"><link rel="prefetch" href="github-action-test/assets/js/174.725b79d6.js"><link rel="prefetch" href="github-action-test/assets/js/175.997f441d.js"><link rel="prefetch" href="github-action-test/assets/js/176.9de4c224.js"><link rel="prefetch" href="github-action-test/assets/js/177.a8e1e146.js"><link rel="prefetch" href="github-action-test/assets/js/178.29e24ea9.js"><link rel="prefetch" href="github-action-test/assets/js/179.48077a1c.js"><link rel="prefetch" href="github-action-test/assets/js/18.71a80014.js"><link rel="prefetch" href="github-action-test/assets/js/180.56e4e8f5.js"><link rel="prefetch" href="github-action-test/assets/js/181.1da22d55.js"><link rel="prefetch" href="github-action-test/assets/js/182.4e7036e1.js"><link rel="prefetch" href="github-action-test/assets/js/183.55caf261.js"><link rel="prefetch" href="github-action-test/assets/js/184.5590d557.js"><link rel="prefetch" href="github-action-test/assets/js/185.03425b26.js"><link rel="prefetch" href="github-action-test/assets/js/186.d4614247.js"><link rel="prefetch" href="github-action-test/assets/js/187.0fdfe8a2.js"><link rel="prefetch" href="github-action-test/assets/js/188.e0945842.js"><link rel="prefetch" href="github-action-test/assets/js/189.9f12226e.js"><link rel="prefetch" href="github-action-test/assets/js/19.fed7eb81.js"><link rel="prefetch" href="github-action-test/assets/js/190.138ce487.js"><link rel="prefetch" href="github-action-test/assets/js/191.da083a53.js"><link rel="prefetch" href="github-action-test/assets/js/192.bb19735d.js"><link rel="prefetch" href="github-action-test/assets/js/193.73110d71.js"><link rel="prefetch" href="github-action-test/assets/js/194.a54e0bdc.js"><link rel="prefetch" href="github-action-test/assets/js/195.2c21bbdb.js"><link rel="prefetch" href="github-action-test/assets/js/196.f9ae8716.js"><link rel="prefetch" href="github-action-test/assets/js/197.ed9cb7e1.js"><link rel="prefetch" href="github-action-test/assets/js/198.0bac81e7.js"><link rel="prefetch" href="github-action-test/assets/js/199.a0059875.js"><link rel="prefetch" href="github-action-test/assets/js/20.5dcc4870.js"><link rel="prefetch" href="github-action-test/assets/js/200.76d7e96c.js"><link rel="prefetch" href="github-action-test/assets/js/201.d8a3f700.js"><link rel="prefetch" href="github-action-test/assets/js/202.2300a3bc.js"><link rel="prefetch" href="github-action-test/assets/js/203.89d8f889.js"><link rel="prefetch" href="github-action-test/assets/js/204.c68c51b9.js"><link rel="prefetch" href="github-action-test/assets/js/205.32c51356.js"><link rel="prefetch" href="github-action-test/assets/js/206.54a41d63.js"><link rel="prefetch" href="github-action-test/assets/js/207.2079b6e9.js"><link rel="prefetch" href="github-action-test/assets/js/208.ff4736ba.js"><link rel="prefetch" href="github-action-test/assets/js/209.42ee4474.js"><link rel="prefetch" href="github-action-test/assets/js/21.7eac99cd.js"><link rel="prefetch" href="github-action-test/assets/js/210.daeaba33.js"><link rel="prefetch" href="github-action-test/assets/js/211.398e9182.js"><link rel="prefetch" href="github-action-test/assets/js/212.2f589483.js"><link rel="prefetch" href="github-action-test/assets/js/213.ef6acd9d.js"><link rel="prefetch" href="github-action-test/assets/js/214.3a51e61b.js"><link rel="prefetch" href="github-action-test/assets/js/215.4d85ee0d.js"><link rel="prefetch" href="github-action-test/assets/js/216.c3e5a24c.js"><link rel="prefetch" href="github-action-test/assets/js/217.80399734.js"><link rel="prefetch" href="github-action-test/assets/js/218.b5e75436.js"><link rel="prefetch" href="github-action-test/assets/js/219.c9a68050.js"><link rel="prefetch" href="github-action-test/assets/js/22.bec3b464.js"><link rel="prefetch" href="github-action-test/assets/js/220.980a1170.js"><link rel="prefetch" href="github-action-test/assets/js/221.08b6209e.js"><link rel="prefetch" href="github-action-test/assets/js/222.88a3d837.js"><link rel="prefetch" href="github-action-test/assets/js/223.956e6403.js"><link rel="prefetch" href="github-action-test/assets/js/224.bc04186c.js"><link rel="prefetch" href="github-action-test/assets/js/225.9ab29a50.js"><link rel="prefetch" href="github-action-test/assets/js/226.9a1face6.js"><link rel="prefetch" href="github-action-test/assets/js/227.afe35492.js"><link rel="prefetch" href="github-action-test/assets/js/228.9a2c38a3.js"><link rel="prefetch" href="github-action-test/assets/js/229.2fb3e014.js"><link rel="prefetch" href="github-action-test/assets/js/23.c8e55e6a.js"><link rel="prefetch" href="github-action-test/assets/js/230.5c77de24.js"><link rel="prefetch" href="github-action-test/assets/js/231.106513a5.js"><link rel="prefetch" href="github-action-test/assets/js/232.4ed67a17.js"><link rel="prefetch" href="github-action-test/assets/js/233.e02cea20.js"><link rel="prefetch" href="github-action-test/assets/js/234.5ef56f38.js"><link rel="prefetch" href="github-action-test/assets/js/235.34affb88.js"><link rel="prefetch" href="github-action-test/assets/js/236.4ae59e8e.js"><link rel="prefetch" href="github-action-test/assets/js/237.0a716bcd.js"><link rel="prefetch" href="github-action-test/assets/js/238.a5a6f749.js"><link rel="prefetch" href="github-action-test/assets/js/239.b3c6c28a.js"><link rel="prefetch" href="github-action-test/assets/js/24.843f9dc4.js"><link rel="prefetch" href="github-action-test/assets/js/240.71dfab9c.js"><link rel="prefetch" href="github-action-test/assets/js/241.36d13e1b.js"><link rel="prefetch" href="github-action-test/assets/js/242.9407698b.js"><link rel="prefetch" href="github-action-test/assets/js/243.9a323fce.js"><link rel="prefetch" href="github-action-test/assets/js/244.d5d5e5fc.js"><link rel="prefetch" href="github-action-test/assets/js/245.23e78971.js"><link rel="prefetch" href="github-action-test/assets/js/246.1e6896a8.js"><link rel="prefetch" href="github-action-test/assets/js/247.54649b33.js"><link rel="prefetch" href="github-action-test/assets/js/248.f6220c27.js"><link rel="prefetch" href="github-action-test/assets/js/249.a8c86440.js"><link rel="prefetch" href="github-action-test/assets/js/25.3a6d9ba8.js"><link rel="prefetch" href="github-action-test/assets/js/250.acaa2a2f.js"><link rel="prefetch" href="github-action-test/assets/js/251.5c554590.js"><link rel="prefetch" href="github-action-test/assets/js/252.5944368f.js"><link rel="prefetch" href="github-action-test/assets/js/253.418c6457.js"><link rel="prefetch" href="github-action-test/assets/js/254.1e2bc621.js"><link rel="prefetch" href="github-action-test/assets/js/255.dda11ea1.js"><link rel="prefetch" href="github-action-test/assets/js/256.bebd29f2.js"><link rel="prefetch" href="github-action-test/assets/js/257.ef786a7b.js"><link rel="prefetch" href="github-action-test/assets/js/258.0ca758f9.js"><link rel="prefetch" href="github-action-test/assets/js/259.02d0d466.js"><link rel="prefetch" href="github-action-test/assets/js/26.7fb93a37.js"><link rel="prefetch" href="github-action-test/assets/js/260.9e83f275.js"><link rel="prefetch" href="github-action-test/assets/js/261.5c99309a.js"><link rel="prefetch" href="github-action-test/assets/js/262.6198ad58.js"><link rel="prefetch" href="github-action-test/assets/js/263.f07c45f5.js"><link rel="prefetch" href="github-action-test/assets/js/264.ea3c778d.js"><link rel="prefetch" href="github-action-test/assets/js/265.f985efe1.js"><link rel="prefetch" href="github-action-test/assets/js/266.80b16b3c.js"><link rel="prefetch" href="github-action-test/assets/js/267.1de01b41.js"><link rel="prefetch" href="github-action-test/assets/js/268.c3765f38.js"><link rel="prefetch" href="github-action-test/assets/js/269.0ba3b5f7.js"><link rel="prefetch" href="github-action-test/assets/js/27.c26cd728.js"><link rel="prefetch" href="github-action-test/assets/js/270.f6801b64.js"><link rel="prefetch" href="github-action-test/assets/js/271.b11d6fd6.js"><link rel="prefetch" href="github-action-test/assets/js/272.744249a9.js"><link rel="prefetch" href="github-action-test/assets/js/273.834d91d3.js"><link rel="prefetch" href="github-action-test/assets/js/274.3f966118.js"><link rel="prefetch" href="github-action-test/assets/js/275.c0c9dcac.js"><link rel="prefetch" href="github-action-test/assets/js/276.d3680149.js"><link rel="prefetch" href="github-action-test/assets/js/277.ac2ebeee.js"><link rel="prefetch" href="github-action-test/assets/js/278.9312043d.js"><link rel="prefetch" href="github-action-test/assets/js/279.f13e2d5a.js"><link rel="prefetch" href="github-action-test/assets/js/28.a8535c65.js"><link rel="prefetch" href="github-action-test/assets/js/280.8ac15987.js"><link rel="prefetch" href="github-action-test/assets/js/281.8119ba9a.js"><link rel="prefetch" href="github-action-test/assets/js/282.d8ef16b4.js"><link rel="prefetch" href="github-action-test/assets/js/283.f88622f3.js"><link rel="prefetch" href="github-action-test/assets/js/284.ceb80007.js"><link rel="prefetch" href="github-action-test/assets/js/285.5efdad43.js"><link rel="prefetch" href="github-action-test/assets/js/286.2e28fcab.js"><link rel="prefetch" href="github-action-test/assets/js/287.8b185af8.js"><link rel="prefetch" href="github-action-test/assets/js/288.42f8aad6.js"><link rel="prefetch" href="github-action-test/assets/js/289.b7e6db6f.js"><link rel="prefetch" href="github-action-test/assets/js/29.f863d270.js"><link rel="prefetch" href="github-action-test/assets/js/290.f9750ca0.js"><link rel="prefetch" href="github-action-test/assets/js/291.49094d30.js"><link rel="prefetch" href="github-action-test/assets/js/292.303e3bf8.js"><link rel="prefetch" href="github-action-test/assets/js/293.ec16a23e.js"><link rel="prefetch" href="github-action-test/assets/js/294.25e735e5.js"><link rel="prefetch" href="github-action-test/assets/js/295.e505e50e.js"><link rel="prefetch" href="github-action-test/assets/js/296.1b8cd174.js"><link rel="prefetch" href="github-action-test/assets/js/297.cc12a5b4.js"><link rel="prefetch" href="github-action-test/assets/js/298.6dbb82df.js"><link rel="prefetch" href="github-action-test/assets/js/299.6932a754.js"><link rel="prefetch" href="github-action-test/assets/js/3.3434e7c9.js"><link rel="prefetch" href="github-action-test/assets/js/30.33ae4079.js"><link rel="prefetch" href="github-action-test/assets/js/300.2b3a3b0c.js"><link rel="prefetch" href="github-action-test/assets/js/301.0e7d0d8a.js"><link rel="prefetch" href="github-action-test/assets/js/302.18d016ac.js"><link rel="prefetch" href="github-action-test/assets/js/303.c10b7887.js"><link rel="prefetch" href="github-action-test/assets/js/304.0a6d220f.js"><link rel="prefetch" href="github-action-test/assets/js/305.205cfca2.js"><link rel="prefetch" href="github-action-test/assets/js/306.1a1d99f8.js"><link rel="prefetch" href="github-action-test/assets/js/307.7930bd41.js"><link rel="prefetch" href="github-action-test/assets/js/308.cecd42e7.js"><link rel="prefetch" href="github-action-test/assets/js/309.9ee0e4fe.js"><link rel="prefetch" href="github-action-test/assets/js/31.7e3179b3.js"><link rel="prefetch" href="github-action-test/assets/js/310.6bfab024.js"><link rel="prefetch" href="github-action-test/assets/js/32.8fd48c3c.js"><link rel="prefetch" href="github-action-test/assets/js/33.0ee1a3bc.js"><link rel="prefetch" href="github-action-test/assets/js/34.1ffa24a8.js"><link rel="prefetch" href="github-action-test/assets/js/35.8eace98e.js"><link rel="prefetch" href="github-action-test/assets/js/36.b7b6ff98.js"><link rel="prefetch" href="github-action-test/assets/js/37.246c7abb.js"><link rel="prefetch" href="github-action-test/assets/js/38.14aee862.js"><link rel="prefetch" href="github-action-test/assets/js/39.ba9eff95.js"><link rel="prefetch" href="github-action-test/assets/js/4.cf3d444c.js"><link rel="prefetch" href="github-action-test/assets/js/40.b1dbb5f8.js"><link rel="prefetch" href="github-action-test/assets/js/41.a3ee8452.js"><link rel="prefetch" href="github-action-test/assets/js/42.2271d3b8.js"><link rel="prefetch" href="github-action-test/assets/js/43.ff67b13d.js"><link rel="prefetch" href="github-action-test/assets/js/44.25af78bf.js"><link rel="prefetch" href="github-action-test/assets/js/45.ae8069c7.js"><link rel="prefetch" href="github-action-test/assets/js/46.1475fff4.js"><link rel="prefetch" href="github-action-test/assets/js/47.e849de28.js"><link rel="prefetch" href="github-action-test/assets/js/48.b3323223.js"><link rel="prefetch" href="github-action-test/assets/js/49.a2f01ab4.js"><link rel="prefetch" href="github-action-test/assets/js/5.1bba094b.js"><link rel="prefetch" href="github-action-test/assets/js/50.29752cd1.js"><link rel="prefetch" href="github-action-test/assets/js/51.b31742d8.js"><link rel="prefetch" href="github-action-test/assets/js/52.ee059e3c.js"><link rel="prefetch" href="github-action-test/assets/js/53.1df54152.js"><link rel="prefetch" href="github-action-test/assets/js/54.c493a13f.js"><link rel="prefetch" href="github-action-test/assets/js/55.19c2b7b2.js"><link rel="prefetch" href="github-action-test/assets/js/56.0c8d8788.js"><link rel="prefetch" href="github-action-test/assets/js/57.f980ceb3.js"><link rel="prefetch" href="github-action-test/assets/js/58.d0e2b991.js"><link rel="prefetch" href="github-action-test/assets/js/59.cfaa51d0.js"><link rel="prefetch" href="github-action-test/assets/js/6.18c63b2d.js"><link rel="prefetch" href="github-action-test/assets/js/60.94a6c17a.js"><link rel="prefetch" href="github-action-test/assets/js/61.a211587e.js"><link rel="prefetch" href="github-action-test/assets/js/62.a7b68d22.js"><link rel="prefetch" href="github-action-test/assets/js/63.caabdc65.js"><link rel="prefetch" href="github-action-test/assets/js/64.b0308434.js"><link rel="prefetch" href="github-action-test/assets/js/65.f08210f4.js"><link rel="prefetch" href="github-action-test/assets/js/66.a12547f5.js"><link rel="prefetch" href="github-action-test/assets/js/67.d59e464d.js"><link rel="prefetch" href="github-action-test/assets/js/68.30a1ed73.js"><link rel="prefetch" href="github-action-test/assets/js/69.eff53774.js"><link rel="prefetch" href="github-action-test/assets/js/7.50fb6ea6.js"><link rel="prefetch" href="github-action-test/assets/js/70.2d7b1a23.js"><link rel="prefetch" href="github-action-test/assets/js/71.5393d596.js"><link rel="prefetch" href="github-action-test/assets/js/72.5db88476.js"><link rel="prefetch" href="github-action-test/assets/js/73.21abade9.js"><link rel="prefetch" href="github-action-test/assets/js/74.b5793716.js"><link rel="prefetch" href="github-action-test/assets/js/75.a8620c3a.js"><link rel="prefetch" href="github-action-test/assets/js/76.6d2f90be.js"><link rel="prefetch" href="github-action-test/assets/js/77.53fc730d.js"><link rel="prefetch" href="github-action-test/assets/js/78.f435ef13.js"><link rel="prefetch" href="github-action-test/assets/js/79.13006449.js"><link rel="prefetch" href="github-action-test/assets/js/8.c03f7c2b.js"><link rel="prefetch" href="github-action-test/assets/js/80.856fc4e7.js"><link rel="prefetch" href="github-action-test/assets/js/81.bc0527c0.js"><link rel="prefetch" href="github-action-test/assets/js/82.a34f291c.js"><link rel="prefetch" href="github-action-test/assets/js/83.64435d95.js"><link rel="prefetch" href="github-action-test/assets/js/84.69137a12.js"><link rel="prefetch" href="github-action-test/assets/js/85.ccb75a15.js"><link rel="prefetch" href="github-action-test/assets/js/86.74cbc6ca.js"><link rel="prefetch" href="github-action-test/assets/js/88.f8024281.js"><link rel="prefetch" href="github-action-test/assets/js/89.ed8f7400.js"><link rel="prefetch" href="github-action-test/assets/js/9.ac7f5bbc.js"><link rel="prefetch" href="github-action-test/assets/js/90.8269eaa0.js"><link rel="prefetch" href="github-action-test/assets/js/91.e7d946cb.js"><link rel="prefetch" href="github-action-test/assets/js/92.dd67399a.js"><link rel="prefetch" href="github-action-test/assets/js/93.a10a8935.js"><link rel="prefetch" href="github-action-test/assets/js/94.808e37c5.js"><link rel="prefetch" href="github-action-test/assets/js/95.3021f9cb.js"><link rel="prefetch" href="github-action-test/assets/js/96.bfa86daf.js"><link rel="prefetch" href="github-action-test/assets/js/97.e79914e5.js"><link rel="prefetch" href="github-action-test/assets/js/98.497ad263.js"><link rel="prefetch" href="github-action-test/assets/js/99.b9cd1dad.js">
+    <link rel="stylesheet" href="github-action-test/assets/css/0.styles.e9ffcd7c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/github-action-test/" class="home-link router-link-active"><!----> <span class="site-name">bilibili-API-collect</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span></span> <!----></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><blockquote><p>ad.proto</p></blockquote> <div class="language-protobuf extra-class"><pre class="language-protobuf"><code><span class="token keyword">syntax</span> <span class="token operator">=</span> <span class="token string">&quot;proto3&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">package</span> bilibili<span class="token punctuation">.</span>ad<span class="token punctuation">.</span>v1<span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token string">&quot;google/protobuf/wrappers.proto&quot;</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 广告控制</span>
+<span class="token keyword">message</span> <span class="token class-name">AdsControlDto</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 视频是否有弹幕，如有，需请求弹幕广告</span>
+    <span class="token builtin">int32</span> has_danmu <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token comment">// 有弹幕的分P视频的cid</span>
+    <span class="token keyword">repeated</span> <span class="token builtin">int64</span> cids <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+    <span class="token comment">// 有弹幕的ogv ep</span>
+    <span class="token keyword">repeated</span> <span class="token positional-class-name class-name">AdOgvEpDto</span> eps <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 有弹幕的ogv ep</span>
+<span class="token keyword">message</span> <span class="token class-name">AdOgvEpDto</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 分集epid</span>
+    <span class="token builtin">int64</span> epid <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token comment">// 是否显示 &quot;荐&quot;</span>
+    <span class="token builtin">bool</span> has_recommend <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 广告数据</span>
+<span class="token keyword">message</span> <span class="token class-name">SourceContentDto</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 广告请求id</span>
+    <span class="token builtin">string</span> request_id <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token comment">// 广告资源位source ID</span>
+    <span class="token builtin">int32</span> source_id <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+    <span class="token comment">// 广告资源位resource ID</span>
+    <span class="token builtin">int32</span> resource_id <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+    <span class="token comment">// 广告位上报标记,对广告返回数据恒为true</span>
+    <span class="token builtin">bool</span> is_ad_loc <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
+    <span class="token comment">// 与天马现有逻辑一致, 0有含义</span>
+    <span class="token comment">// 0:内容 1:广告</span>
+    <span class="token positional-class-name class-name">google<span class="token punctuation">.</span>protobuf<span class="token punctuation">.</span>Int32Value</span> server_type <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+    <span class="token comment">// 客户端IP回传拼接</span>
+    <span class="token builtin">string</span> client_ip <span class="token operator">=</span> <span class="token number">6</span><span class="token punctuation">;</span>
+    <span class="token comment">// 广告卡片位置在一刷中的位置, 天马用, 0有含义</span>
+    <span class="token positional-class-name class-name">google<span class="token punctuation">.</span>protobuf<span class="token punctuation">.</span>Int32Value</span> card_index <span class="token operator">=</span> <span class="token number">7</span><span class="token punctuation">;</span>
+    <span class="token comment">// 广告资源位source 位次</span>
+    <span class="token builtin">int32</span> index <span class="token operator">=</span> <span class="token number">8</span><span class="token punctuation">;</span>
+    <span class="token comment">// 广告内容</span>
+    <span class="token positional-class-name class-name">AdDto</span> ad_content <span class="token operator">=</span> <span class="token number">9</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 广告内容</span>
+<span class="token keyword">message</span> <span class="token class-name">AdDto</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 广告创意ID</span>
+    <span class="token builtin">int64</span> creative_id <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token comment">// 广告闭环上报回传数据</span>
+    <span class="token builtin">string</span> ad_cb <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+    <span class="token comment">// 额外广告数据</span>
+    <span class="token positional-class-name class-name">AdContentExtraDto</span> extra <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+    <span class="token comment">// 广告标记</span>
+    <span class="token builtin">int32</span> cm_mark <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
+    <span class="token comment">//</span>
+    <span class="token builtin">int64</span> top_view_id <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+    <span class="token comment">//</span>
+    <span class="token builtin">int32</span> creative_type <span class="token operator">=</span> <span class="token number">6</span><span class="token punctuation">;</span>
+    <span class="token comment">//</span>
+    <span class="token builtin">int32</span> card_type <span class="token operator">=</span> <span class="token number">7</span><span class="token punctuation">;</span>
+    <span class="token comment">//</span>
+    <span class="token builtin">int32</span> creative_style <span class="token operator">=</span> <span class="token number">8</span><span class="token punctuation">;</span>
+    <span class="token comment">//</span>
+    <span class="token builtin">int32</span> is_ad <span class="token operator">=</span> <span class="token number">9</span><span class="token punctuation">;</span>
+    <span class="token comment">//</span>
+    <span class="token positional-class-name class-name">CreativeDto</span> creative_content <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 额外广告数据</span>
+<span class="token keyword">message</span> <span class="token class-name">AdContentExtraDto</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 动态布局</span>
+    <span class="token builtin">string</span> layout <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token comment">// 展现监控url</span>
+    <span class="token keyword">repeated</span> <span class="token builtin">string</span> show_urls <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+    <span class="token comment">// 点击监控url</span>
+    <span class="token keyword">repeated</span> <span class="token builtin">string</span> click_urls <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+    <span class="token comment">// 弹幕创意列表展示第三方上报</span>
+    <span class="token keyword">repeated</span> <span class="token builtin">string</span> danmu_list_show_urls <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
+    <span class="token comment">// 弹幕创意列表点击第三方上报</span>
+    <span class="token keyword">repeated</span> <span class="token builtin">string</span> danmu_list_click_urls <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+    <span class="token comment">// 弹幕详情页展示第三方上报</span>
+    <span class="token keyword">repeated</span> <span class="token builtin">string</span> danmu_detail_show_urls <span class="token operator">=</span> <span class="token number">6</span><span class="token punctuation">;</span>
+    <span class="token comment">// 弹幕商品添加购物车第三方上报</span>
+    <span class="token keyword">repeated</span> <span class="token builtin">string</span> danmu_trolley_add_urls <span class="token operator">=</span> <span class="token number">7</span><span class="token punctuation">;</span>
+    <span class="token comment">// useWebView默认false</span>
+    <span class="token builtin">bool</span> use_ad_web_v2 <span class="token operator">=</span> <span class="token number">8</span><span class="token punctuation">;</span>
+    <span class="token comment">// app唤起白名单</span>
+    <span class="token keyword">repeated</span> <span class="token builtin">string</span> open_whitelist <span class="token operator">=</span> <span class="token number">9</span><span class="token punctuation">;</span>
+    <span class="token comment">// app下载白名单</span>
+    <span class="token positional-class-name class-name">AppPackageDto</span> download_whitelist <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token comment">// 卡片相关信息</span>
+    <span class="token positional-class-name class-name">AdCardDto</span> card <span class="token operator">=</span> <span class="token number">11</span><span class="token punctuation">;</span>
+    <span class="token comment">// 视频播放和弹幕播放上报控制时间 ms</span>
+    <span class="token builtin">int32</span> report_time <span class="token operator">=</span> <span class="token number">12</span><span class="token punctuation">;</span>
+    <span class="token comment">// 是否优先唤起app store</span>
+    <span class="token builtin">int32</span> appstore_priority <span class="token operator">=</span> <span class="token number">13</span><span class="token punctuation">;</span>
+    <span class="token comment">// 广告售卖类型</span>
+    <span class="token builtin">int32</span> sales_type <span class="token operator">=</span> <span class="token number">14</span><span class="token punctuation">;</span>
+    <span class="token comment">// 落地页是否预加载</span>
+    <span class="token builtin">int32</span> preload_landingpage <span class="token operator">=</span> <span class="token number">15</span><span class="token punctuation">;</span>
+    <span class="token comment">// 是否需要展示风险行业提示</span>
+    <span class="token builtin">bool</span> special_industry <span class="token operator">=</span> <span class="token number">16</span><span class="token punctuation">;</span>
+    <span class="token comment">// 风险行业提示</span>
+    <span class="token builtin">string</span> special_industry_tips <span class="token operator">=</span> <span class="token number">17</span><span class="token punctuation">;</span>
+    <span class="token comment">// 是否展示下载弹框</span>
+    <span class="token builtin">bool</span> enable_download_dialog <span class="token operator">=</span> <span class="token number">18</span><span class="token punctuation">;</span>
+    <span class="token comment">// 是否允许分享</span>
+    <span class="token builtin">bool</span> enable_share <span class="token operator">=</span> <span class="token number">19</span><span class="token punctuation">;</span>
+    <span class="token comment">// 个人空间广告入口类型</span>
+    <span class="token comment">// 1:橱窗 2:商品店铺 3:小程序</span>
+    <span class="token builtin">int32</span> upzone_entrance_type <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+    <span class="token comment">// 个人空间广告入口上报id,橱窗id(当前用Mid)、店铺id或者小程序id</span>
+    <span class="token builtin">int32</span> upzone_entrance_report_id <span class="token operator">=</span> <span class="token number">21</span><span class="token punctuation">;</span>
+    <span class="token comment">// 分享数据</span>
+    <span class="token positional-class-name class-name">AdShareInfoDto</span> share_info <span class="token operator">=</span> <span class="token number">22</span><span class="token punctuation">;</span>
+    <span class="token comment">// topview图片链接，闪屏预下载用</span>
+    <span class="token builtin">string</span> topview_pic_url <span class="token operator">=</span> <span class="token number">23</span><span class="token punctuation">;</span>
+    <span class="token comment">// topview视频链接，闪屏预下载用</span>
+    <span class="token builtin">string</span> topview_video_url <span class="token operator">=</span> <span class="token number">24</span><span class="token punctuation">;</span>
+    <span class="token comment">// 点击区域</span>
+    <span class="token comment">// 0:表示banner可点击 1:表示素材可点击</span>
+    <span class="token builtin">int32</span> click_area <span class="token operator">=</span> <span class="token number">25</span><span class="token punctuation">;</span>
+    <span class="token comment">// 店铺</span>
+    <span class="token builtin">int64</span> shop_id <span class="token operator">=</span> <span class="token number">26</span><span class="token punctuation">;</span>
+    <span class="token comment">// up主</span>
+    <span class="token builtin">int64</span> up_mid <span class="token operator">=</span> <span class="token number">27</span><span class="token punctuation">;</span>
+    <span class="token comment">// 回传id</span>
+    <span class="token builtin">string</span> track_id <span class="token operator">=</span> <span class="token number">28</span><span class="token punctuation">;</span>
+    <span class="token comment">// 商店直投</span>
+    <span class="token builtin">int32</span> enable_store_direct_launch <span class="token operator">=</span> <span class="token number">29</span><span class="token punctuation">;</span>
+    <span class="token comment">// DPA2.0商品ID</span>
+    <span class="token builtin">int64</span> product_id <span class="token operator">=</span> <span class="token number">30</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//</span>
+<span class="token keyword">message</span> <span class="token class-name">CreativeDto</span> <span class="token punctuation">{</span>
+    <span class="token comment">//</span>
+    <span class="token builtin">string</span> title <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token comment">//</span>
+    <span class="token builtin">string</span> description <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+    <span class="token comment">//</span>
+    <span class="token builtin">string</span> image_url <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+    <span class="token comment">//</span>
+    <span class="token builtin">string</span> image_md5 <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
+    <span class="token comment">//</span>
+    <span class="token builtin">string</span> url <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+    <span class="token comment">//</span>
+    <span class="token builtin">string</span> click_url <span class="token operator">=</span> <span class="token number">6</span><span class="token punctuation">;</span>
+    <span class="token comment">//</span>
+    <span class="token builtin">string</span> show_url <span class="token operator">=</span> <span class="token number">7</span><span class="token punctuation">;</span>
+    <span class="token comment">//</span>
+    <span class="token builtin">int64</span> video_id <span class="token operator">=</span> <span class="token number">8</span><span class="token punctuation">;</span>
+    <span class="token comment">//</span>
+    <span class="token builtin">string</span> thumbnail_url <span class="token operator">=</span> <span class="token number">9</span><span class="token punctuation">;</span>
+    <span class="token comment">//</span>
+    <span class="token builtin">string</span> thumbnail_url_md5 <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token comment">//</span>
+    <span class="token builtin">string</span> logo_url <span class="token operator">=</span> <span class="token number">11</span><span class="token punctuation">;</span>
+    <span class="token comment">//</span>
+    <span class="token builtin">string</span> logo_md5 <span class="token operator">=</span> <span class="token number">12</span><span class="token punctuation">;</span>
+    <span class="token comment">//</span>
+    <span class="token builtin">string</span> username <span class="token operator">=</span> <span class="token number">13</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// app下载白名单</span>
+<span class="token keyword">message</span> <span class="token class-name">AppPackageDto</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 包大小(单位bytes)</span>
+    <span class="token builtin">int64</span> size <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token comment">//</span>
+    <span class="token builtin">string</span> display_name <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+    <span class="token comment">//</span>
+    <span class="token builtin">string</span> apk_name <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+    <span class="token comment">// url</span>
+    <span class="token builtin">string</span> url <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
+    <span class="token comment">// bili schema url</span>
+    <span class="token builtin">string</span> bili_url <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+    <span class="token comment">// 包md5</span>
+    <span class="token builtin">string</span> md5 <span class="token operator">=</span> <span class="token number">6</span><span class="token punctuation">;</span>
+    <span class="token comment">// 包icon</span>
+    <span class="token builtin">string</span> icon <span class="token operator">=</span> <span class="token number">7</span><span class="token punctuation">;</span>
+    <span class="token comment">// 开发者姓名</span>
+    <span class="token builtin">string</span> dev_name <span class="token operator">=</span> <span class="token number">8</span><span class="token punctuation">;</span>
+    <span class="token comment">// 权限地址</span>
+    <span class="token builtin">string</span> auth_url <span class="token operator">=</span> <span class="token number">9</span><span class="token punctuation">;</span>
+    <span class="token comment">// 权限名，逗号隔开</span>
+    <span class="token builtin">string</span> auth_name <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token comment">// 版本</span>
+    <span class="token builtin">string</span> version <span class="token operator">=</span> <span class="token number">11</span><span class="token punctuation">;</span>
+    <span class="token comment">// 更新时间,yy-mm-hh格式</span>
+    <span class="token builtin">string</span> update_time <span class="token operator">=</span> <span class="token number">12</span><span class="token punctuation">;</span>
+    <span class="token comment">// 隐私协议标题</span>
+    <span class="token builtin">string</span> privacy_name <span class="token operator">=</span> <span class="token number">13</span><span class="token punctuation">;</span>
+    <span class="token comment">// 隐私协议url</span>
+    <span class="token builtin">string</span> privacy_url <span class="token operator">=</span> <span class="token number">14</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 卡片</span>
+<span class="token keyword">message</span> <span class="token class-name">AdCardDto</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 卡片类型</span>
+    <span class="token builtin">int32</span> card_type <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token comment">// 标题</span>
+    <span class="token builtin">string</span> title <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+    <span class="token comment">// 描述</span>
+    <span class="token builtin">string</span> desc <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+    <span class="token comment">// 额外描述</span>
+    <span class="token builtin">string</span> extra_desc <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
+    <span class="token comment">// 长描述</span>
+    <span class="token builtin">string</span> long_desc <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+    <span class="token comment">// 短标题, 弹幕广告目录面板标题</span>
+    <span class="token builtin">string</span> short_title <span class="token operator">=</span> <span class="token number">6</span><span class="token punctuation">;</span>
+    <span class="token comment">// 弹幕/浮层广告的弹幕标题</span>
+    <span class="token builtin">string</span> danmu_title <span class="token operator">=</span> <span class="token number">7</span><span class="token punctuation">;</span>
+    <span class="token comment">// 弹幕/浮层广告的弹幕高度，整型，分母为100</span>
+    <span class="token builtin">int32</span> danmu_height <span class="token operator">=</span> <span class="token number">8</span><span class="token punctuation">;</span>
+    <span class="token comment">// 弹幕/浮层广告的弹幕宽度，整型，分母为100</span>
+    <span class="token builtin">int32</span> danmu_width <span class="token operator">=</span> <span class="token number">9</span><span class="token punctuation">;</span>
+    <span class="token comment">// 弹幕/浮层广告生存时间，单位为毫秒</span>
+    <span class="token builtin">int32</span> danmu_life <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token comment">// 弹幕/浮层开始时间，单位为毫秒</span>
+    <span class="token builtin">int32</span> danmu_begin <span class="token operator">=</span> <span class="token number">11</span><span class="token punctuation">;</span>
+    <span class="token comment">// 背景色值（含透明度）如#80FFFFFF</span>
+    <span class="token builtin">string</span> danmu_color <span class="token operator">=</span> <span class="token number">12</span><span class="token punctuation">;</span>
+    <span class="token comment">// 弹幕/浮层广告H5落地页</span>
+    <span class="token builtin">string</span> danmu_h5url <span class="token operator">=</span> <span class="token number">13</span><span class="token punctuation">;</span>
+    <span class="token comment">// 弹幕/浮层 广告icon</span>
+    <span class="token builtin">string</span> danmu_icon <span class="token operator">=</span> <span class="token number">14</span><span class="token punctuation">;</span>
+    <span class="token comment">// 折叠时间，永驻浮层折叠时间，单位为毫秒</span>
+    <span class="token builtin">int32</span> fold_time <span class="token operator">=</span> <span class="token number">15</span><span class="token punctuation">;</span>
+    <span class="token comment">// 广告标文案</span>
+    <span class="token builtin">string</span> ad_tag <span class="token operator">=</span> <span class="token number">16</span><span class="token punctuation">;</span>
+    <span class="token comment">// cover数组</span>
+    <span class="token keyword">repeated</span> <span class="token positional-class-name class-name">AdCoverDto</span> covers <span class="token operator">=</span> <span class="token number">17</span><span class="token punctuation">;</span>
+    <span class="token comment">// 卡片跳转链接</span>
+    <span class="token builtin">string</span> jump_url <span class="token operator">=</span> <span class="token number">18</span><span class="token punctuation">;</span>
+    <span class="token comment">//</span>
+    <span class="token builtin">string</span> imax_landing_page_json_string <span class="token operator">=</span> <span class="token number">19</span><span class="token punctuation">;</span>
+    <span class="token comment">// app唤起schema</span>
+    <span class="token builtin">string</span> callup_url <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+    <span class="token comment">// univeral link域名</span>
+    <span class="token builtin">string</span> universal_app <span class="token operator">=</span> <span class="token number">21</span><span class="token punctuation">;</span>
+    <span class="token comment">// 原价, 单位为分</span>
+    <span class="token builtin">string</span> ori_price <span class="token operator">=</span> <span class="token number">22</span><span class="token punctuation">;</span>
+    <span class="token comment">// 现价, 同上</span>
+    <span class="token builtin">int32</span> cur_price <span class="token operator">=</span> <span class="token number">23</span><span class="token punctuation">;</span>
+    <span class="token comment">// 券后/现价 价格描述</span>
+    <span class="token builtin">string</span> price_desc <span class="token operator">=</span> <span class="token number">24</span><span class="token punctuation">;</span>
+    <span class="token comment">// 价格单位符号</span>
+    <span class="token builtin">string</span> price_symbol <span class="token operator">=</span> <span class="token number">25</span><span class="token punctuation">;</span>
+    <span class="token comment">// 券后价格 &quot;1000&quot;</span>
+    <span class="token builtin">string</span> goods_cur_price <span class="token operator">=</span> <span class="token number">26</span><span class="token punctuation">;</span>
+    <span class="token comment">// 原价 &quot;¥1002&quot;</span>
+    <span class="token builtin">string</span> goods_ori_price <span class="token operator">=</span> <span class="token number">27</span><span class="token punctuation">;</span>
+    <span class="token comment">// 开放平台商品</span>
+    <span class="token positional-class-name class-name">AdGoodDto</span> good <span class="token operator">=</span> <span class="token number">28</span><span class="token punctuation">;</span>
+    <span class="token comment">// 打分? 满分为100</span>
+    <span class="token builtin">int32</span> rank <span class="token operator">=</span> <span class="token number">29</span><span class="token punctuation">;</span>
+    <span class="token comment">// 热度</span>
+    <span class="token builtin">int32</span> hot_score <span class="token operator">=</span> <span class="token number">30</span><span class="token punctuation">;</span>
+    <span class="token comment">// 按钮</span>
+    <span class="token positional-class-name class-name">AdButtonDto</span> button <span class="token operator">=</span> <span class="token number">31</span><span class="token punctuation">;</span>
+    <span class="token comment">// 广告主logo</span>
+    <span class="token builtin">string</span> adver_logo <span class="token operator">=</span> <span class="token number">32</span><span class="token punctuation">;</span>
+    <span class="token comment">// 广告主name</span>
+    <span class="token builtin">string</span> adver_name <span class="token operator">=</span> <span class="token number">33</span><span class="token punctuation">;</span>
+    <span class="token comment">// 广告主主页链接</span>
+    <span class="token builtin">string</span> adver_page_url <span class="token operator">=</span> <span class="token number">34</span><span class="token punctuation">;</span>
+    <span class="token comment">// 视频弹幕，视频广告用</span>
+    <span class="token keyword">repeated</span> <span class="token builtin">string</span> video_barrage <span class="token operator">=</span> <span class="token number">35</span><span class="token punctuation">;</span>
+    <span class="token comment">// 商业标信息</span>
+    <span class="token positional-class-name class-name">AdBusinessMarkDto</span> ad_tag_style <span class="token operator">=</span> <span class="token number">36</span><span class="token punctuation">;</span>
+    <span class="token comment">// 自动播放视频</span>
+    <span class="token positional-class-name class-name">AdAutoPlayVideoDto</span> video <span class="token operator">=</span> <span class="token number">37</span><span class="token punctuation">;</span>
+    <span class="token comment">// 反馈面板功能模块，屏蔽、投诉、广告介绍</span>
+    <span class="token positional-class-name class-name">AdFeedbackPanelDto</span> feedback_panel <span class="token operator">=</span> <span class="token number">38</span><span class="token punctuation">;</span>
+    <span class="token comment">//</span>
+    <span class="token builtin">int64</span> adver_mid <span class="token operator">=</span> <span class="token number">39</span><span class="token punctuation">;</span>
+    <span class="token comment">//</span>
+    <span class="token builtin">int64</span> adver_account_id <span class="token operator">=</span> <span class="token number">40</span><span class="token punctuation">;</span>
+    <span class="token comment">//</span>
+    <span class="token builtin">string</span> duration <span class="token operator">=</span> <span class="token number">41</span><span class="token punctuation">;</span>
+    <span class="token comment">//</span>
+    <span class="token keyword">repeated</span> <span class="token positional-class-name class-name">QualityInfo</span> quality_infos <span class="token operator">=</span> <span class="token number">42</span><span class="token punctuation">;</span>
+    <span class="token comment">// 动态广告文本</span>
+    <span class="token builtin">string</span> dynamic_text <span class="token operator">=</span> <span class="token number">43</span><span class="token punctuation">;</span>
+    <span class="token comment">// 广告主信息</span>
+    <span class="token positional-class-name class-name">AdverDto</span> adver <span class="token operator">=</span> <span class="token number">44</span><span class="token punctuation">;</span>
+    <span class="token comment">// 评分</span>
+    <span class="token builtin">int32</span> grade_level <span class="token operator">=</span> <span class="token number">45</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 分享</span>
+<span class="token keyword">message</span> <span class="token class-name">AdShareInfoDto</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 分享标题</span>
+    <span class="token builtin">string</span> title <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token comment">// 分享副标题</span>
+    <span class="token builtin">string</span> subtitle <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+    <span class="token comment">// 分享图片url</span>
+    <span class="token builtin">string</span> image_url <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 广告卡片封面数据</span>
+<span class="token keyword">message</span> <span class="token class-name">AdCoverDto</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 图片链接</span>
+    <span class="token builtin">string</span> url <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token comment">// 动图循环次数</span>
+    <span class="token comment">// 0:无限循环</span>
+    <span class="token builtin">int32</span> loop <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+    <span class="token comment">// 图片点击跳转地址，截至目前为空</span>
+    <span class="token builtin">string</span> jump_url <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+    <span class="token comment">// 跳转监测链接， 数组，单个图片的监控，出区别于click_urls，应前端要求。（此字段截至目前为空，使用时需再次确认）</span>
+    <span class="token keyword">repeated</span> <span class="token builtin">string</span> report_urls <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
+    <span class="token comment">// 图片高度</span>
+    <span class="token builtin">int32</span> image_height <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+    <span class="token comment">// 图片宽度</span>
+    <span class="token builtin">int32</span> image_width <span class="token operator">=</span> <span class="token number">6</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 按钮</span>
+<span class="token keyword">message</span> <span class="token class-name">AdButtonDto</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 类型</span>
+    <span class="token comment">// 1:落地页 2:应用唤起 3:应用下载</span>
+    <span class="token builtin">int32</span> type <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token comment">// 按钮文案</span>
+    <span class="token builtin">string</span> text <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+    <span class="token comment">// 按钮跳转地址</span>
+    <span class="token builtin">string</span> jump_url <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+    <span class="token comment">// 跳转监测链接</span>
+    <span class="token builtin">string</span> report_urls <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
+    <span class="token comment">// 唤起schema</span>
+    <span class="token builtin">string</span> dlsuc_callup_url <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+    <span class="token comment">//游戏id</span>
+    <span class="token builtin">int32</span> game_id <span class="token operator">=</span> <span class="token number">6</span><span class="token punctuation">;</span>
+    <span class="token comment">//游戏监控字段</span>
+    <span class="token builtin">string</span> game_monitor_param <span class="token operator">=</span> <span class="token number">7</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 商业标信息</span>
+<span class="token keyword">message</span> <span class="token class-name">AdBusinessMarkDto</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 商业标样式</span>
+    <span class="token comment">// 0:不展示标 1:实心+文字 2:空心框+文字 3:纯文字标 4:纯图片标</span>
+    <span class="token builtin">int32</span> type <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token comment">// 商业标文案</span>
+    <span class="token builtin">string</span> text <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+    <span class="token comment">// 商业标文案颜色,如#80FFFFFF RGBA</span>
+    <span class="token builtin">string</span> text_color <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+    <span class="token comment">// 夜间模式文字色</span>
+    <span class="token builtin">string</span> text_color_night <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
+    <span class="token comment">// 背景色</span>
+    <span class="token builtin">string</span> bg_color <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+    <span class="token comment">// 夜间模式背景色</span>
+    <span class="token builtin">string</span> bg_color_night <span class="token operator">=</span> <span class="token number">6</span><span class="token punctuation">;</span>
+    <span class="token comment">// 边框色</span>
+    <span class="token builtin">string</span> border_color <span class="token operator">=</span> <span class="token number">7</span><span class="token punctuation">;</span>
+    <span class="token comment">// 夜间模式边框色</span>
+    <span class="token builtin">string</span> border_color_night <span class="token operator">=</span> <span class="token number">8</span><span class="token punctuation">;</span>
+    <span class="token comment">// 图片商业标</span>
+    <span class="token builtin">string</span> img_url <span class="token operator">=</span> <span class="token number">9</span><span class="token punctuation">;</span>
+    <span class="token comment">// 图片高度</span>
+    <span class="token builtin">int32</span> img_height <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token comment">// 图片宽度</span>
+    <span class="token builtin">int32</span> img_width <span class="token operator">=</span> <span class="token number">11</span><span class="token punctuation">;</span>
+    <span class="token comment">//</span>
+    <span class="token builtin">string</span> bg_border_color <span class="token operator">=</span> <span class="token number">12</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 自动播放视频</span>
+<span class="token keyword">message</span> <span class="token class-name">AdAutoPlayVideoDto</span> <span class="token punctuation">{</span>
+    <span class="token comment">// avid</span>
+    <span class="token builtin">int64</span> avid <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token comment">// cid</span>
+    <span class="token builtin">int64</span> cid <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+    <span class="token comment">// 分P</span>
+    <span class="token builtin">int64</span> page <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+    <span class="token comment">//</span>
+    <span class="token builtin">string</span> from <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
+    <span class="token comment">// 是否自动播放</span>
+    <span class="token builtin">string</span> url <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+    <span class="token comment">// 是否自动播放</span>
+    <span class="token builtin">string</span> cover <span class="token operator">=</span> <span class="token number">6</span><span class="token punctuation">;</span>
+    <span class="token comment">// 是否自动播放</span>
+    <span class="token builtin">bool</span> auto_play <span class="token operator">=</span> <span class="token number">7</span><span class="token punctuation">;</span>
+    <span class="token comment">// 按钮是否动态变色</span>
+    <span class="token builtin">bool</span> btn_dyc_color <span class="token operator">=</span> <span class="token number">8</span><span class="token punctuation">;</span>
+    <span class="token comment">// 按钮动态变色时间 ms</span>
+    <span class="token builtin">int32</span> btn_dyc_time <span class="token operator">=</span> <span class="token number">9</span><span class="token punctuation">;</span>
+    <span class="token comment">// 用于做联播是否是同一个视频的id</span>
+    <span class="token builtin">int64</span> biz_id <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token comment">// 开始播放三方监控</span>
+    <span class="token keyword">repeated</span> <span class="token builtin">string</span> process0_urls <span class="token operator">=</span> <span class="token number">11</span><span class="token punctuation">;</span>
+    <span class="token comment">// 播放3S三方监控</span>
+    <span class="token keyword">repeated</span> <span class="token builtin">string</span> play_3s_urls <span class="token operator">=</span> <span class="token number">12</span><span class="token punctuation">;</span>
+    <span class="token comment">// 播放5S三方监控</span>
+    <span class="token keyword">repeated</span> <span class="token builtin">string</span> play_5s_urls <span class="token operator">=</span> <span class="token number">13</span><span class="token punctuation">;</span>
+    <span class="token comment">// 横竖屏</span>
+    <span class="token builtin">int32</span> orientation <span class="token operator">=</span> <span class="token number">14</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 反馈面板功能模块</span>
+<span class="token keyword">message</span> <span class="token class-name">AdFeedbackPanelDto</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 面板类型，广告、推广</span>
+    <span class="token builtin">string</span> panel_type_text <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token comment">// 反馈面版信息</span>
+    <span class="token keyword">repeated</span> <span class="token positional-class-name class-name">AdFeedbackPanelModuleDto</span> feedback_panel_detail <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 反馈面版信息</span>
+<span class="token keyword">message</span> <span class="token class-name">AdFeedbackPanelModuleDto</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 模块id</span>
+    <span class="token builtin">int32</span> module_id <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token comment">// icon url</span>
+    <span class="token builtin">string</span> icon_url <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+    <span class="token comment">// 跳转类型</span>
+    <span class="token comment">// 1:气泡 2:H5</span>
+    <span class="token builtin">int32</span> jump_type <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+    <span class="token comment">// 跳转地址</span>
+    <span class="token builtin">string</span> jump_url <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
+    <span class="token comment">// 文案</span>
+    <span class="token builtin">string</span> text <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+    <span class="token comment">// 二级文案数组</span>
+    <span class="token keyword">repeated</span> <span class="token positional-class-name class-name">AdSecondFeedbackPanelDto</span> secondary_panel <span class="token operator">=</span> <span class="token number">6</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 二级文案</span>
+<span class="token keyword">message</span> <span class="token class-name">AdSecondFeedbackPanelDto</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 屏蔽理由id</span>
+    <span class="token builtin">int32</span> reason_id <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token comment">// 理由文案</span>
+    <span class="token builtin">string</span> text <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 开放平台商品</span>
+<span class="token keyword">message</span> <span class="token class-name">AdGoodDto</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 电商商品ID</span>
+    <span class="token builtin">int64</span> item_id <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token comment">// 电商SKU ID</span>
+    <span class="token builtin">int64</span> sku_id <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+    <span class="token comment">// 店铺ID</span>
+    <span class="token builtin">int64</span> shop_id <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+    <span class="token comment">// SKU库存</span>
+    <span class="token builtin">int64</span> sku_num <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//</span>
+<span class="token keyword">message</span> <span class="token class-name">QualityInfo</span> <span class="token punctuation">{</span>
+    <span class="token comment">//</span>
+    <span class="token builtin">string</span> icon <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token comment">//</span>
+    <span class="token builtin">string</span> text <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+    <span class="token comment">//</span>
+    <span class="token builtin">bool</span> is_bg <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+    <span class="token comment">//</span>
+    <span class="token builtin">string</span> bg_color <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
+    <span class="token comment">//</span>
+    <span class="token builtin">string</span> bg_color_night <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 广告主信息</span>
+<span class="token keyword">message</span> <span class="token class-name">AdverDto</span> <span class="token punctuation">{</span>
+    <span class="token comment">//</span>
+    <span class="token builtin">int64</span> adver_id <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token comment">//</span>
+    <span class="token builtin">string</span> adver_logo <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+    <span class="token comment">//</span>
+    <span class="token builtin">string</span> adver_name <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+    <span class="token comment">//</span>
+    <span class="token builtin">int32</span> adver_type <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
+    <span class="token comment">//</span>
+    <span class="token builtin">string</span> adver_page_url <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+    <span class="token comment">//</span>
+    <span class="token builtin">string</span> adver_desc <span class="token operator">=</span> <span class="token number">6</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="github-action-test/assets/js/app.3a2e0c2e.js" defer></script><script src="github-action-test/assets/js/2.c3585fe2.js" defer></script><script src="github-action-test/assets/js/87.c5326e0d.js" defer></script>
+  </body>
+</html>
