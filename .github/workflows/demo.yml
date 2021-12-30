@@ -17,9 +17,15 @@ jobs:
         with:
           repository: 'lxb007981/bilibili-API-collect'
           ref: 'master'
+          path: './docs'
       - uses: actions/checkout@v2
         with:
           ref: 'deploy'
+          path: './scripts'
+      - name: Set file structures
+        run: cp -r ./docs/* .
+        run: cp -r ./scripts/* .
+        run: rm -rf ./docs ./scripts
       - name: Use Node.js
         uses: actions/setup-node@v2
         with:
