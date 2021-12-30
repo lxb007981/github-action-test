@@ -6,7 +6,7 @@ set -e
 npm ci
 cp -r imgs .vuepress/public
 node scan.js
-npx npx vuepress build .
+npx vuepress build .
 
 cd .vuepress/dist
 
