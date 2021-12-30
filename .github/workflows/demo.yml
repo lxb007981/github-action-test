@@ -41,8 +41,8 @@ jobs:
           npx vuepress build .
       - name: Init Git repository
         run: |
-          git config --local user.email "lxb007981@hotmail.com"
-          git config --local user.name "lxb007981"
+          git config --global user.email "lxb007981@hotmail.com"
+          git config --global user.name "lxb007981"
           cd dist
           git init
           git add -A
