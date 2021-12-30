@@ -33,15 +33,15 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '14.x' 
-  #    - name: Install and Build 🔧
-  #      run: |
-  #        npm install -g npm
-  #        npm ci
-  #        cp -r imgs .vuepress/public
-  #        node scan.js
-  #        npx vuepress build .
+      - name: Install and Build 🔧
+        run: |
+          npm install -g npm
+          npm ci
+          cp -r imgs .vuepress/public
+          node scan.js
+          npx vuepress build .
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.7
         with:
           branch: gh-pages
-          folder: imgs
+          folder: dist
