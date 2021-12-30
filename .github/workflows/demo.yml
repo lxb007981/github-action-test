@@ -40,10 +40,11 @@ jobs:
           cp -r imgs .vuepress/public
           ls .vuepress
           ls .vuepress/public
-          node scan.js
-          npx vuepress build .
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.7
-        with:
-          branch: gh-pages
-          folder: dist
+          ls .vuepress/public/imgs
+  #        node scan.js
+ #         npx vuepress build .
+  #    - name: Deploy 🚀
+  #      uses: JamesIves/github-pages-deploy-action@4.1.7
+ #       with:
+ #         branch: gh-pages
+  #        folder: dist
