@@ -1,0 +1,13 @@
+{
+  "name": "bilibili-api-collect",
+  "version": "0.1",
+  "license": "CC BY-NC 4.0",
+  "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.9.5",
+    "insert-line": "^1.1.0",
+    "istextorbinary": "^6.0.0",
+    "node-html-parser": "^5.2.0",
+    "vuepress": "^1.9.5",
+    "vuepress-plugin-nprogress": "^1.1.8"
+  }
+}
