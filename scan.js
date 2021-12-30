@@ -55,7 +55,7 @@ function scanAndgen(dirname) {
 const dirs = fs.readdirSync(__dirname, { withFileTypes: true })
     .filter(dirent => dirent.isDirectory())
     .map(dirent => dirent.name)
-    .filter(name => name !== 'node_modules' && name !== '.vuepress');
+    .filter(name => name !== 'node_modules' && name !== '.vuepress' && name !== '.git');
 
 for (const dir of dirs) {
     scanAndgen(path.resolve(__dirname, dir))
