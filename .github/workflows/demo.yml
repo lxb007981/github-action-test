@@ -36,8 +36,9 @@ jobs:
       - name: Install and Build 🔧
         run: |
           npm install -g npm
-          npm ci
-          cp -r imgs .vuepress/public
+ #         npm ci
+          mkdir -p .vuepress/public/imgs
+          cp -r imgs/* .vuepress/public/imgs
           ls .vuepress
           ls .vuepress/public
           ls .vuepress/public/imgs
