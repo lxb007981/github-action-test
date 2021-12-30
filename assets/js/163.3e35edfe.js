@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[163],{557:function(t,s,n){"use strict";n.r(s);var e=n(32),o=Object(e.a)({},(function(){var t=this.$createElement,s=this._self._c||t;return s("ContentSlotsDistributor",{attrs:{"slot-key":this.$parent.slotKey}},[s("p",[s("a",{attrs:{href:"sync.proto"}},[this._v("sync.proto")])])])}),[],!1,null,null,null);s.default=o.exports}}]);
