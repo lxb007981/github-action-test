@@ -24,6 +24,7 @@ jobs:
           path: './scripts'
       - run: cp -r ./docs/* .
       - run: cp -r ./scripts/* .
+      - run: cp -r ./scripts/.vuepress .
       - run: rm -rf ./docs ./scripts
       - name: Use Node.js
         uses: actions/setup-node@v2
