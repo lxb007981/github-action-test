@@ -39,8 +39,17 @@ jobs:
           cp -r imgs .vuepress/public
           node scan.js
           npx vuepress build .
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.7
+      - name: Init Git repository
+        run: |
+          git config --local user.email "lxb007981@hotmail.com"
+          git config --local user.name "lxb007981"
+          cd dist
+          git init
+          git add -A
+          git commit -m 'deploy'
+      - name: Push changes 🚀
+        uses: ad-m/github-push-action@master
         with:
-          branch: gh-pages 
-          folder: dist 
+          github_token: ${{ secrets.PERSONAL_TOKEN }}
+          branch: 'gh-pages'
+          force: true
