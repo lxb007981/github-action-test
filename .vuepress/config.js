@@ -5,7 +5,7 @@ module.exports = {
     },
     title: 'bilibili-API-collect',
     description: '',
-    base: 'github-action-test',
+    base: '/github-action-test/',
     dest: 'dist',
     markdown: {
         html: true,
