@@ -27,6 +27,7 @@ module.exports = {
                 if (/^http/.test(attr)) {
                     return `<img src="${attr}" alt="${alt}" referrerpolicy="no-referrer">`;
                 }
+                /*
                 switch (attr[0]) {
                     case '.':
                     case '/':
@@ -34,6 +35,7 @@ module.exports = {
                     default:
                         return `<img src="./${attr}" alt="${alt}"`;
                 }
+                */
             };
 
             /**
@@ -53,6 +55,7 @@ module.exports = {
                         imgs[index].setAttribute('referrerpolicy', "no-referrer");
                         continue;
                     }
+                    /*
                     switch (src[0]) {
                         case '.':
                         case '/':
@@ -60,6 +63,7 @@ module.exports = {
                         default:
                             imgs[index].setAttribute('src', `./${src}`); break;
                     }
+                    */
                 }
                 return root.toString();
             };
