@@ -37,6 +37,12 @@ jobs:
         run: |
           mkdir -p .vuepress/public/imgs
           cp -r imgs/* .vuepress/public/imgs
-          ls .vuepress
-          ls .vuepress/public
-          ls .vuepress/public/imgs
+          npm install -g npm
+          npm ci
+          node scan.js
+          npx vuepress build .
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.7
+        with:
+          branch: gh-pages
+          folder: dist
