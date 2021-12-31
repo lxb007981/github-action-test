@@ -16,9 +16,10 @@ module.exports = {
         toc: { includeLevel: [1, 2] },
         extendMarkdown: md => {
             /**
-             * add './' before local url
+             * add base url before absolute url (/imgs/foo.png --> /base/imgs/foo.png)
              */
             const { parse } = require('node-html-parser');
+            const base = '/github-action-test'; // no trailing slash!
             md.renderer.rules.image = function (tokens, idx, _options, _env, _self) {
                 const token = tokens[idx],
                     aIndex = token.attrIndex('src'),
@@ -27,21 +28,18 @@ module.exports = {
                 if (/^http/.test(attr)) {
                     return `<img src="${attr}" alt="${alt}" referrerpolicy="no-referrer">`;
                 }
-                /*
                 switch (attr[0]) {
-                    case '.':
                     case '/':
-                        return `<img src="${attr}" alt="${alt}"`;
+                        return `<img src="${base}${attr}" alt="${alt}"`;
                     default:
-                        return `<img src="./${attr}" alt="${alt}"`;
+                        return `<img src="${attr}" alt="${alt}"`;
                 }
-                */
             };
 
             /**
-             * add './' before local url, and referrerpolicy to external url
+             * add base url before absolute url (/imgs/foo.png --> /base/imgs/foo.png), and referrerpolicy to external url
              */
-            md.renderer.rules.html_block = function (tokens, idx /*, options, env */) {
+            md.renderer.rules.html_block = function (tokens, idx) {
                 const content = tokens[idx].content;
                 const root = parse(content);
                 const imgs = root.getElementsByTagName('img');
@@ -55,15 +53,13 @@ module.exports = {
                         imgs[index].setAttribute('referrerpolicy', "no-referrer");
                         continue;
                     }
-                    /*
+
                     switch (src[0]) {
-                        case '.':
                         case '/':
-                            break;
+                            imgs[index].setAttribute('src', `${base}${src}`); break;
                         default:
-                            imgs[index].setAttribute('src', `./${src}`); break;
+                            break;
                     }
-                    */
                 }
                 return root.toString();
             };
